@@ -1,0 +1,55 @@
+.detailContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.detailContainer img {
+  border-radius: 20px;
+  width: 400px;
+  object-fit: contain;
+}
+
+.boxInfoContainer{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.nameContainer {
+  display: flex;
+  flex-direction: column;
+  line-height: 0px;
+  padding-left: 5px;
+}
+
+.nameContainer h3 {
+  font-size: 28px;
+  color: white;
+}
+
+.nameContainer p {
+  font-weight: bold;
+  color: #ccc;
+  font-size: 20px;
+}
+
+.locationDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 0px;
+}
+
+.dataP {
+  color: white;
+  font-weight: bold;
+  font-size:20px;
+  transform: translateY(-12px);
+}
+
+.titleP {
+  color: gray;
+  font-weight: bold;
+  /* font-size: 18px; */
+}

@@ -1,0 +1,43 @@
+.favsContainer {
+  padding-block: 30px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.selectContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.selectContainer select {
+  border-radius: 20px;
+  width: 100%;
+  font-weight: bold;
+  background: #fff;
+  outline: none;
+  border: none;
+  appearance: none;
+  padding:0.5em 1em ;
+} 
+
+
+@media screen and (max-width: 1260px) {
+  .favsContainer{
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (max-width: 1065px) {
+  .favsContainer {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  }
+}
+@media screen and (max-width: 660px) {
+  .favsContainer {
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+  }
+}

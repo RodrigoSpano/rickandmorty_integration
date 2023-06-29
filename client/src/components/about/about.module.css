@@ -1,0 +1,87 @@
+.aboutContainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 40px;
+  gap: 20px;
+}
+
+.aboutContainer img {
+  border-radius: 30px;
+  width: 500px;
+  opacity: 80%;
+}
+
+.infoCont {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  align-items: flex-start;
+}
+
+.infoCont h2 {
+  font-size: 28px;
+}
+
+.personalCardContainerTrue {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+  font-weight: bold;
+  font-size: 18px;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.detailTrue {
+  transform: translateY(-30px);
+  
+}
+
+.personalCardContainer {
+  display: flex;
+  gap: 10px;
+  font-weight: bold;
+  font-size: 18px;
+  align-items: center;
+  justify-content: center;
+}
+
+.prop{
+  color: #ccc;
+  font-size: 22px;
+}
+
+@media screen and (max-width: 1000px){
+  .aboutContainer {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    line-height: 0;
+  }
+  .infoCont, .personalCardContainerTrue{ 
+    align-items: center;
+  }
+  .detailTrue {
+    text-align: center;
+  }
+  .infoCont h2 {
+    font-size: 32px;
+  }
+}
+@media screen and (max-width: 540px){
+  .aboutContainer img {
+    width: 300px;
+  }
+  .personalCardContainer {
+    font-size: 16px;
+  }
+  .prop, .detailTrue {
+    font-size: 12px;
+    max-width: 300px;
+  }
+  .detailTrue {
+    transform: translateY(-18px);
+  }
+}

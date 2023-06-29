@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbit&display=swap');
+.errorPageCont {
+  background-image: url('/public/assets/error-back.jpg');
+  min-height: 100vh;
+  width: 100vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ccc;
+  font-weight: bold;
+  font-family: 'Orbit', sans-serif;
+  overflow: hidden;
+}
+
+.errorPageCont div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+}
+
+.errorPageCont div h3 {
+
+  font-size: 40px;
+  max-width: 500px;
+  text-align: center;
+}
+
+.errorPageCont div img {
+  width: 500px;
+  transition: all 0.5s ease-in-out;
+  border-radius: 99999px;
+}
+
+.errorPageCont div img:hover {
+  transform: rotate(180deg);
+  box-shadow: inset 1px -1px 70px 50px rgba(0,0,0,0.75),  1px -1px 70px 50px rgba(0,0,0,0.75);
+  
+}
+
+
+@media screen and (max-width: 500px) {
+  .errorPageCont div h3 {
+    font-size: 28px;
+  }
+  .errorPageCont div p {
+    font-size: 12px;
+  }
+  .errorPageCont div img {
+    width: 300px;
+  }
+}

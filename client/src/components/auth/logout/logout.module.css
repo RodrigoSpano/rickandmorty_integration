@@ -1,0 +1,15 @@
+.logoutBtn {
+  position: absolute;
+  bottom: 0;
+  right: 10px;
+  background-color:transparent ;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  z-index: 100;
+}
+
+.logoutBtn:hover {
+  transform: scale(1.2);
+}
