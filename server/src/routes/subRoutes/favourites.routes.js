@@ -1,5 +1,6 @@
 const express = require('express')
-const { postFav, deleteFav } = require('../../controllers/handleFavourites')
+const postFav = require('../../controllers/favorites/postFav')
+const deleteFav = require('../../controllers/favorites/deleteFav')
 
 const router = express.Router()
 
