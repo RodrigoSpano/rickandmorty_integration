@@ -2,7 +2,7 @@ const { Favorite } = require('../../db/database')
 
 const postFavHandler = async (req, res) => {
   try {
-    const { name, origin, status, image, species, gender, id } = req.body
+    const { name, origin, status, image, species, gender, id } = req.body.character
     if (!name || !origin || !status || !image || !species || !gender) return res.status(401).json({ error: 'Faltan datos' })
     await Favorite.findOrCreate({
       where: { name: name },

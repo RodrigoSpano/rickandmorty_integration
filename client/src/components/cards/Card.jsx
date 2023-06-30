@@ -11,7 +11,7 @@ import { useLocation } from "react-router-dom";
 function Card({ character, handleClose }) {
   const [isFav, setIsFav] = useState(false);
 
-  const myFavourites = useSelector((state) => state.favourites.myFavourites);
+  const myFavorites = useSelector((state) => state.favourites.myFavourites);
   const dispatch = useDispatch();
   const { pathname } = useLocation();
   const navigate = useNavigate();
@@ -27,10 +27,12 @@ function Card({ character, handleClose }) {
     }
   };
   useEffect(() => {
-    myFavourites?.forEach((el) => {
-      if (el.id === character.id) setIsFav(true);
-    });
-  }, [myFavourites, character.id]);
+    if (Array.isArray(myFavorites)) {
+      myFavorites?.forEach((el) => {
+        if (el.id === character.id) setIsFav(true);
+      });
+    }
+  }, [myFavorites, character.id]);
 
   let statusIcon =
     character.status === "Alive"

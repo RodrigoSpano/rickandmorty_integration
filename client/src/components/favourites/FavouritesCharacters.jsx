@@ -7,9 +7,10 @@ const FavouritesCharacters = ({ handleClose }) => {
   const myFavourites = useSelector((state) => state.favourites.myFavourites);
   return (
     <div className={styles.favsContainer}>
-      {myFavourites?.map((el) => (
-        <Card character={el} handleClose={handleClose} key={el.id} />
-      ))}
+      {Array.isArray(myFavourites) &&
+        myFavourites?.map((el) => (
+          <Card character={el} handleClose={handleClose} key={el.id} />
+        ))}
     </div>
   );
 };

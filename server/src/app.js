@@ -5,5 +5,5 @@ const PORT = process.env.PORT
 
 app.listen(PORT, () => {
   console.log(`srv running at port ${PORT}`)
-  sequelize.sync({ force: true })
+  sequelize.sync({ force: false })
 })

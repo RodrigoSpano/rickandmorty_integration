@@ -14,12 +14,13 @@ const Favourites = () => {
     dispatch(removeFav(id));
   };
   useEffect(() => {
-    myFavourites.forEach((el) => {
-      let match = characters.find((char) => el.id === char.id);
-      if (!match) {
-        dispatch(removeFav(el.id));
-      }
-    });
+    Array.isArray(myFavourites) &&
+      myFavourites?.forEach((el) => {
+        let match = characters.find((char) => el.id === char.id);
+        if (!match) {
+          dispatch(removeFav(el.id));
+        }
+      });
   }, []);
   return (
     <div>
