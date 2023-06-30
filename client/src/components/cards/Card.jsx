@@ -27,11 +27,10 @@ function Card({ character, handleClose }) {
     }
   };
   useEffect(() => {
-    if (Array.isArray(myFavorites)) {
+    Array.isArray(myFavorites) &&
       myFavorites?.forEach((el) => {
         if (el.id === character.id) setIsFav(true);
       });
-    }
   }, [myFavorites, character.id]);
 
   let statusIcon =

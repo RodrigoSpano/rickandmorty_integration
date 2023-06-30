@@ -5,6 +5,7 @@ import { useSelector } from "react-redux";
 
 const FavouritesCharacters = ({ handleClose }) => {
   const myFavourites = useSelector((state) => state.favourites.myFavourites);
+
   return (
     <div className={styles.favsContainer}>
       {Array.isArray(myFavourites) &&

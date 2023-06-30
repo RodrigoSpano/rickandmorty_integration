@@ -11,7 +11,7 @@ export const addFav = (character) => {
     const resp = await axios.post(url, { character })
     return dispatch({
       type: ADD_FAV,
-      payload: resp.data
+      payload: resp.data.favorites
     })
   }
 
@@ -23,7 +23,7 @@ export const removeFav = (id) => {
     const resp = await axios.delete(url)
     return dispatch({
       type: REMOVE_FAV,
-      payload: resp.data
+      payload: resp.data.favorites
     })
   }
 }
