@@ -7,21 +7,11 @@ import SelectComponent from "../components/favourites/SelectComponent";
 
 const Favourites = () => {
   const dispatch = useDispatch();
-  // const myFavourites = useSelector((state) => state.favourites.myFavourites);
-  // const characters = useSelector((state) => state.characters.characters);
   const handleClose = (id) => {
     dispatch(removeCharacter(id));
     dispatch(removeFav(id));
   };
-  // useEffect(() => {
-  //   Array.isArray(myFavourites) &&
-  //     myFavourites?.forEach((el) => {
-  //       let match = characters.find((char) => el.id === char.id);
-  //       if (!match) {
-  //         dispatch(removeFav(el.id));
-  //       }
-  //     });
-  // }, []);
+
   return (
     <div>
       <SelectComponent />
